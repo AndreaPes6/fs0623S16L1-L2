@@ -1,5 +1,28 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Pagamenti";
 }
+
+<div class="container-fluid">
+    <h1 class="display-4">Aggiungi un Pagamento</h1>
+    <form>
+        <div class="d-flex flex-column w-75">
+        <label for="periodo_pagamento">Periodo di pagamento:</label>
+        <input type="date" id="periodo_pagamento" name="periodo_pagamento" required>
+        </div>
+
+        <div class="d-flex flex-column w-75">
+        <label for="ammontare_pagamento">Ammontare del pagamento:</label>
+        <input type="number" id="ammontare_pagamento" name="ammontare_pagamento" min="0"  required>
+        </div>
+
+        <div class="d-flex flex-column w-75">
+        <label for="tipo_pagamento">Tipo di pagamento:</label>
+        <select id="tipo_pagamento" name="tipo_pagamento">
+            <option value="stipendio">Stipendio</option>
+            <option value="acconto">Acconto</option>
+        </select>
+        </div>
+
+        <input class="mt-5" type="submit" value="Registra Pagamento">
+    </form>
+</div>
