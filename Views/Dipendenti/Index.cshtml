@@ -4,7 +4,7 @@
 
 <div class="container-fluid">
     <h1 class="display-4">Aggiungi un dipendente</h1>
-    <form>
+    <form asp-controller="Dipendenti" asp-action="Add" method="post">
         <div class="d-flex w-100">
         <div class="d-flex flex-column me-5">
         <label for="nome">Nome:</label>
@@ -24,20 +24,20 @@
 
         <div class="d-flex flex-column w-75">
         <label for="codice_fiscale">Codice Fiscale:</label>
-        <input type="text" id="codice_fiscale" name="codice_fiscale" required>
+        <input type="text" id="codice_fiscale" name="codiceFiscale" required>
         </div>
 
         <div class="d-flex flex-column w-75">
         <label for="coniugato">Coniugato:</label>
-        <select id="coniugato" name="coniugato">
-            <option value="si">Si</option>
-            <option value="no">No</option>
+            <select id="coniugato" name="statoConiugazione">
+            <option value="true">Si</option>
+            <option value="false">No</option>
         </select>
         </div>
 
         <div class="d-flex flex-column w-75">
         <label for="num_figli">Numero di figli a carico:</label>
-        <input type="number" id="num_figli" name="num_figli" min="0" value="0">
+        <input type="number" name="numFigli" min="0" value="0">
         </div>
 
         <div class="d-flex flex-column w-75">

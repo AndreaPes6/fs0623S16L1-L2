@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Visualizza Dipendenti";
+}
+
+<div>
+    <h1>Visualizza Dipendenti</h1>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Cognome</th>
+                    <th scope="col">Indirizzo</th>
+                    <th scope="col">CodiceFiscale</th>
+                    <th scope="col">StatoConiugazione</th>
+                    <th scope="col">Numero Figli</th>
+                    <th scope="col">Mansione</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var dipendenti in Model)
+                {
+                    <tr>
+                        <th scope="row">@dipendenti.IdDipendenti</th>
+                        <td>@dipendenti.Nome</td>
+                        <td>@dipendenti.Cognome</td>
+                        <td>@dipendenti.Indirizzo</td>
+                        <td>@dipendenti.CodiceFiscale</td>
+                        <td>@(dipendenti.StatoConiugazione ? "Sposato" : "Non sposato")</td>
+                        <td>@dipendenti.NumFigli</td>
+                        <td>@dipendenti.Mansione</td>
+                    </tr>
+                }             
+            </tbody>
+        </table>
+    </div>
+</div>

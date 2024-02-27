@@ -8,5 +8,10 @@ namespace MuratoriFortissimi.Controllers
         {
             return View();
         }
+
+        public IActionResult VisualizzaPagamenti()
+        {
+            return View();
+        }
     }
 }
